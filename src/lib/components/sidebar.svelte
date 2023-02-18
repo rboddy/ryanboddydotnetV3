@@ -6,8 +6,10 @@
 </script>
 <div class="sidebar-container">
     <Nav />
-    <h1>{title}</h1>
-    <p>{content}</p>
+    <div class="text">
+        <h1>{title}</h1>
+        <p>{content}</p>
+    </div>
     <div class="images">
         <img class="foreground" src="/PNGme.png" alt="Ryan" >
         <img class="background" src="/imageBG.png" alt="Background" >
@@ -19,6 +21,10 @@
         border-right: 23px solid #FFD375;
         height: 100vh;
         overflow: hidden;
+    }
+    .text {
+        width: 80%;
+        margin: 0 auto;
     }
     .images {
         position: relative;
@@ -36,8 +42,8 @@
         font-family: 'IBM Plex Sans', sans-serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 1.5rem;
-        font-size: clamp(1.5rem, 0.7625000000000001rem + 3.6875vw, 5.1875rem);
+        font-size: 1.875rem;
+        font-size: clamp(1.875rem, 1.375rem + 2.5vw, 4.375rem);
         line-height: 83px;
         text-align: center;
         margin: 0;
@@ -54,7 +60,6 @@
         letter-spacing: 0.15em;
 
         color: #F2F2F2;
-        width: 90%;
         margin: 0 auto;
         margin-top: 25px;
     }
