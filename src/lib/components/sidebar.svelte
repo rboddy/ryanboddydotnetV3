@@ -1,8 +1,13 @@
 <script>
+    import { onMount } from "svelte";
     import Nav from "./nav.svelte";
 
     export let title;
     export let content;
+
+    onMount(() => {
+        gsap.from(".images", { y: 653, duration: 1, ease: "back.out(1)", delay: .5 })
+    })
 </script>
 <div class="sidebar-container">
     <Nav />
@@ -47,7 +52,7 @@
         line-height: 83px;
         text-align: center;
         margin: 0;
-        margin-top: 100px;
+        margin-top: 80px;
     }
     p {
         font-family: 'Poppins', sans-serif;

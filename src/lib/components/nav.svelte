@@ -1,7 +1,16 @@
+<script>
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        gsap.from(".navlink", { x: -1000, duration: 1, stagger: -.1 })
+    })
+
+</script>
+
 <nav class="nav-container">
-    <button><span class="material-symbols-outlined">face</span></button>
-    <button><span class="material-symbols-outlined">code</span></button>
-    <button><span class="material-symbols-outlined">mail</span></button>
+    <button class="navlink"><span class="material-symbols-outlined">face</span></button>
+    <button class="navlink"><span class="material-symbols-outlined">code</span></button>
+    <button class="navlink"><span class="material-symbols-outlined">mail</span></button>
 </nav>
 
 <style>
@@ -15,8 +24,8 @@
         padding-top: 5%;
     }
     button {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
         border-radius: 90px;
         border: 5px solid #FFD375;
         background-color: #010400;
