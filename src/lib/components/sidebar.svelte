@@ -67,7 +67,7 @@
         line-height: 110%;
         /* or 22px */
 
-        letter-spacing: 0.15em;
+        letter-spacing: 0.05em;
 
         color: #F2F2F2;
         margin: 0 auto;

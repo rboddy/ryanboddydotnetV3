@@ -30,8 +30,8 @@
         padding-top: 5%;
     }
     button {
-        height: 80px;
-        width: 80px;
+        height: clamp(3.75rem, 3.5rem + 1.25vw, 5rem);
+        width: clamp(3.75rem, 3.5rem + 1.25vw, 5rem);
         border-radius: 90px;
         border: 5px solid #FFD375;
         background-color: #010400;
@@ -46,6 +46,7 @@
         'wght' 400,
         'GRAD' 0,
         'opsz' 48;
-        font-size: 48px;
+        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
     }
 </style>
