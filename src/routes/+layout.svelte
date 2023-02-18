@@ -9,6 +9,10 @@
         display: grid;
         grid-template-columns: 30% 1fr;
     }
+    :global(a) {
+        text-decoration: none;
+        color: #ffd375;
+    }
     @media(max-width: 480px){
         :global(.content) {
             grid-template-columns: 1fr;

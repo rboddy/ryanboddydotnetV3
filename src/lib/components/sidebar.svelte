@@ -4,21 +4,25 @@
 
     export let title;
     export let content;
+    export let image = true;
+    export let anim = false;
 
     onMount(() => {
         gsap.from(".images", { y: 653, duration: 1, ease: "back.out(1)", delay: .5 })
     })
 </script>
 <div class="sidebar-container">
-    <Nav />
+    <Nav anim={anim}/>
     <div class="text">
         <h1>{title}</h1>
-        <p>{content}</p>
+        <p>{@html content}</p>
     </div>
-    <div class="images">
-        <img class="foreground" src="/PNGme.png" alt="Ryan" >
-        <img class="background" src="/imageBG.png" alt="Background" >
-    </div>
+    {#if image}
+        <div class="images">
+            <img class="foreground" src="/PNGme.png" alt="Ryan" >
+            <img class="background" src="/imageBG.png" alt="Background" >
+        </div>
+    {/if}
 </div>
 
 <style>
@@ -26,6 +30,7 @@
         border-right: 23px solid #FFD375;
         height: 100vh;
         overflow: hidden;
+        background-color: #010400;
     }
     .text {
         width: 80%;

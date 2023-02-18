@@ -1,22 +1,28 @@
 <script>
     import { onMount } from "svelte";
+    import { goto } from "$app/navigation";
+
+    export let anim;
 
     onMount(() => {
-        gsap.from(".navlink", { x: -1000, duration: 1, stagger: -.1 })
+        if(anim){
+            gsap.from(".navlink", { x: -1000, duration: 1, stagger: -.1 })
+        }
     })
 
 </script>
 
 <nav class="nav-container">
-    <button class="navlink"><span class="material-symbols-outlined">face</span></button>
-    <button class="navlink"><span class="material-symbols-outlined">code</span></button>
-    <button class="navlink"><span class="material-symbols-outlined">mail</span></button>
+    <button class="navlink" on:click={() => goto("/")}><span class="material-symbols-outlined">home</span></button>
+    <button class="navlink" on:click={() => goto("/about")}><span class="material-symbols-outlined">face</span></button>
+    <button class="navlink" on:click={() => goto("/work")}><span class="material-symbols-outlined">code</span></button>
+    <button class="navlink" on:click={() => goto("/contact")}><span class="material-symbols-outlined">mail</span></button>
 </nav>
 
 <style>
     .nav-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         width: 100%;
         width: 80%;
         margin: 0 auto;
