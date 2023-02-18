@@ -1,7 +1,5 @@
 <script>
     import Nav from "./nav.svelte";
-    import { slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 
     export let title;
     export let content;
@@ -10,7 +8,7 @@
     <Nav />
     <h1>{title}</h1>
     <p>{content}</p>
-    <div class="images" transition:slide="{{delay: 250, duration: 300, easing: quintOut }}">
+    <div class="images">
         <img class="foreground" src="/PNGme.png" alt="Ryan" >
         <img class="background" src="/imageBG.png" alt="Background" >
     </div>
