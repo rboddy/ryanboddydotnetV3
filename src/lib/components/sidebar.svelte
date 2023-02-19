@@ -31,10 +31,16 @@
         height: 100vh;
         overflow: hidden;
         background-color: #010400;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .text {
         width: 80%;
         margin: 0 auto;
+    }
+    img {
+        width: 100%;
     }
     .images {
         position: relative;
@@ -45,6 +51,7 @@
     .background {
         position: absolute;
         bottom: 4px;
+        left: 0;
         z-index: -1;
     }
     h1 {
