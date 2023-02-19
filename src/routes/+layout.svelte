@@ -15,7 +15,7 @@
     }
     @media(max-width: 480px){
         :global(.content) {
-            grid-template-columns: 1fr;
+            display: block;
         }
     }
 </style>

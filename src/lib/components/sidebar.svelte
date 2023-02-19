@@ -72,4 +72,10 @@
         margin: 0 auto;
         margin-top: 25px;
     }
+    @media(max-width: 480px){
+        .sidebar-container {
+            border: none;
+            overflow: visible;
+        }
+    }
 </style>
