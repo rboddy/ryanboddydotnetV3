@@ -55,7 +55,6 @@
         font-size: 1.875rem;
         font-size: clamp(1.875rem, 1.375rem + 2.5vw, 4.375rem);
         line-height: 83px;
-        text-align: center;
         margin: 0;
         margin-top: 80px;
     }

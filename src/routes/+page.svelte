@@ -1,6 +1,6 @@
 <script>
-    import Hero from "../lib/components/home/hero.svelte";
-    import Sidebar from "../lib/components/sidebar.svelte";
+    import Hero from "$lib/components/home/hero.svelte";
+    import Sidebar from "$lib/components/sidebar.svelte";
 
 </script>
 <div class="content">
