@@ -27,5 +27,8 @@
         width: 100%;
         height: auto;
         mix-blend-mode: multiply;
+        position: absolute;
+        bottom: 0;
+        right: 10%;
     }
 </style>
