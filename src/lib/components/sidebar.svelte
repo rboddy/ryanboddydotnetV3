@@ -17,12 +17,12 @@
         <h1>{title}</h1>
         <p>{@html content}</p>
     </div>
-    {#if image}
         <div class="images">
-            <img class="foreground" src="/PNGme.png" alt="Ryan" >
-            <img class="background" src="/imageBG.png" alt="Background" >
+            {#if image}
+                <img class="foreground" src="/PNGme.png" alt="Ryan" >
+                <img class="background" src="/imageBG.png" alt="Background" >
+            {/if}
         </div>
-    {/if}
 </div>
 
 <style>
@@ -42,13 +42,17 @@
         margin: 0 auto;
     }
     img {
-        width: 100%;
+        width: 120%;
     }
     .images {
         position: relative;
+        flex-grow: 1;
     }
     .foreground {
         mix-blend-mode: multiply;
+        position: absolute;
+        bottom: 4px;
+        left: 0;
     }
     .background {
         position: absolute;
@@ -85,6 +89,7 @@
         .sidebar-container {
             border: none;
             overflow: visible;
+            overflow-x: hidden;
         }
     }
 </style>
