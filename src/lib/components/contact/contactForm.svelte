@@ -34,6 +34,7 @@
         padding: 5px;
         width: 60%;
         font-family: 'IBM Plex Sans', sans-serif;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     textarea {
         border: none;
@@ -42,6 +43,7 @@
         padding: 5px;
         width: 60%;
         font-family: 'IBM Plex Sans', sans-serif;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     textarea::placeholder {
         font-family: 'IBM Plex Sans', sans-serif;
@@ -60,6 +62,7 @@
         font-weight: 700;
         font-size: 16px;
         font-family: 'IBM Plex Sans', sans-serif;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     button:hover {
         cursor: pointer;
