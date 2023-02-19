@@ -1,4 +1,7 @@
 <script>
+    import { onMount } from "svelte";
+
+
     let work = [
         {
             name: "Erica Braley Photography",
@@ -6,6 +9,9 @@
             preview: "/EricaBraleyScreenshot.png"
         }
     ]
+    onMount(() => {
+        gsap.from(".work-pane", { y: 1000, duration: 1, ease: "power3.out" })
+    })
 </script>
 
 <div class="viewer-container">
@@ -24,6 +30,7 @@
         height: 100vh;
         width: 70vw;
         display: flex;
+        overflow: hidden;
     }
     .work-pane {
         width: 80%;
