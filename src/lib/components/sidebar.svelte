@@ -11,7 +11,7 @@
         gsap.from(".images", { y: 653, duration: 1, ease: "back.out(1)", delay: .5 })
     })
 </script>
-<div class="sidebar-container">
+<div class="sidebar-container flex">
     <Nav anim={anim}/>
     <div class="text">
         <h1>{title}</h1>
@@ -31,6 +31,8 @@
         height: 100vh;
         overflow: hidden;
         background-color: #010400;
+    }
+    .flex {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
