@@ -10,6 +10,9 @@
     onMount(() => {
         gsap.from(".images", { y: 653, duration: 1, ease: "back.out(1)", delay: .5 })
     })
+    function scroll(){
+        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })
+    }
 </script>
 <div class="sidebar-container flex">
     <Nav anim={anim}/>
@@ -17,12 +20,13 @@
         <h1>{title}</h1>
         <p>{@html content}</p>
     </div>
-        <div class="images">
-            {#if image}
-                <img class="foreground" src="/PNGme.png" alt="Ryan" >
-                <img class="background" src="/imageBG.png" alt="Background" >
-            {/if}
-        </div>
+    <div class="images">
+        {#if image}
+            <img class="foreground" src="/PNGme.png" alt="Ryan" >
+            <img class="background" src="/imageBG.png" alt="Background" >
+        {/if}
+    </div>
+    <button on:click={scroll}><span class="material-symbols-outlined">arrow_downward</span></button>
 </div>
 
 <style>
@@ -85,11 +89,35 @@
         margin: 0 auto;
         margin-top: 25px;
     }
+    button {
+        background: none;
+        border: none;
+        color: #FFD375;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: none;
+    }
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+        font-size: 48px;
+    }
     @media(max-width: 480px){
         .sidebar-container {
             border: none;
             overflow: visible;
             overflow-x: hidden;
+            border-bottom: 23px solid #FFD375;
+        }
+        h1 {
+            margin-top: 40px;
+        }
+        button {
+            display: block;
         }
     }
 </style>

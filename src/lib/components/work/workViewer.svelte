@@ -28,7 +28,6 @@
 <style>
     .viewer-container {
         height: 100vh;
-        width: 70vw;
         display: flex;
         overflow: hidden;
     }
@@ -50,5 +49,11 @@
     a > img {
         width: 100%;
         height: auto;
+    }
+    @media(max-width: 480px){
+        h2 {
+            line-height: initial;
+            margin-bottom: 20px;
+        }
     }
 </style>

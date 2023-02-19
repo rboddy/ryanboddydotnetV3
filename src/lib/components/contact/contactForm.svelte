@@ -64,4 +64,9 @@
     button:hover {
         cursor: pointer;
     }
+    @media(max-width: 480px){
+        form {
+            width: 90%;
+        }
+    }
 </style>
