@@ -18,4 +18,9 @@
             display: block;
         }
     }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        :global(.content) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 </style>

@@ -20,7 +20,7 @@
         justify-content: space-evenly;
         height: 50vh;
         background-color: #ffd375;
-        width: 40%;
+        width: 80%;
         border-radius: 15px;
     }
     form * {
@@ -63,10 +63,5 @@
     }
     button:hover {
         cursor: pointer;
-    }
-    @media(max-width: 480px){
-        form {
-            width: 90%;
-        }
     }
 </style>
