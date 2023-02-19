@@ -12,9 +12,6 @@
 </div>
 
 <style>
-    :global(body) {
-        overflow: hidden;
-    }
     div {
         background-color: #ffd375;
         height: 100vh;
