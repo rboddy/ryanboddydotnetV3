@@ -3,8 +3,7 @@
 <style>
     div {
         background: url("/hero.png");
-        height: 100%;
-        width: 100%;
+        height: 100vh;
         background-size: cover;
     }
 </style>
