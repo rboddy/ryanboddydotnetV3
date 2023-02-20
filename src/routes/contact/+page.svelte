@@ -46,13 +46,15 @@
                         };
                     }}
                     >
-                    <input type="text" name="name" placeholder="name">
-                    <input type="email" name="email" placeholder="email">
-                    <textarea rows="10" name="message" placeholder="message"></textarea>
+                    <input required type="text" name="name" placeholder="name">
+                    <input required type="email" name="email" placeholder="email">
+                    <textarea required rows="10" name="message" placeholder="message"></textarea>
                     <button type="submit">Send</button>
                 </form>
             </div>
             <div class="qf-card qf-back">
+                <h2>Thanks so much for getting in touch!</h2>
+                <p>I'll respond to you as soon as I can!</p>
             </div>
         </div>  
     </div>
@@ -116,6 +118,28 @@
         cursor: pointer;
     }
 
+    h2 {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.625rem;
+        font-size: clamp(1.625rem, 1.325rem + 1.5vw, 3.125rem); 
+        line-height: 83px;
+        margin: 0;
+    }
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+        line-height: 110%;
+        /* or 22px */
+
+        letter-spacing: 0.05em;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
     /* gsap stuff */
     .quickflip {
         position:relative;
@@ -123,7 +147,6 @@
         width: 80%;
     }
     .qf-card {
-        opacity:0.8;
         position:absolute;
         top:0;
         left:0;
@@ -137,6 +160,12 @@
     .qf-card.qf-front {
         position:relative;
         background-color: #ffd375;
+    }
+    .qf-back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     @media(max-width: 480px){
         input, textarea, button {

@@ -1,8 +1,7 @@
-// Install with: npm install @trycourier/courier
 import { CourierClient } from "@trycourier/courier";
 import { env as private_env } from '$env/dynamic/private'
 
-// const courier = CourierClient({ authorizationToken: private_env.COURIER_API });
+const courier = CourierClient({ authorizationToken: private_env.COURIER_API });
 
 export const actions = {
     default: async ({ request }) => {
@@ -14,23 +13,23 @@ export const actions = {
 
         console.log(message);
 
-        // const { requestId } = await courier.send({
-        //   message: {
-        //     to: {
-        //       data: {
-        //         name: "Ryan Boddy",
-        //       },
-        //       email: "avidryanb@gmail.com",
-        //     },
-        //     content: {
-        //       title: "Email from Website",
-        //       body: message,
-        //     },
-        //     routing: {
-        //       method: "single",
-        //       channels: ["email"],
-        //     },
-        //   },
-        // });
+        const { requestId } = await courier.send({
+          message: {
+            to: {
+              data: {
+                name: "Ryan Boddy",
+              },
+              email: "avidryanb@gmail.com",
+            },
+            content: {
+              title: "Email from Website",
+              body: message,
+            },
+            routing: {
+              method: "single",
+              channels: ["email"],
+            },
+          },
+        });
     }
 }
