@@ -138,4 +138,12 @@
         position:relative;
         background-color: #ffd375;
     }
+    @media(max-width: 480px){
+        input, textarea, button {
+            width: 85%;
+        }
+        .quickflip {
+            height: 60vh;
+        }
+    }
 </style>
