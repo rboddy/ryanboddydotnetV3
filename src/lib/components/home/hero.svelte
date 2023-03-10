@@ -2,7 +2,7 @@
 
 <style>
     div {
-        background: url("/hero.png");
+        background: url("/hero.jpg");
         height: 100vh;
         background-size: cover;
     }

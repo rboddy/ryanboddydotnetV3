@@ -6,7 +6,7 @@
         {
             name: "Erica Braley Photography",
             url: "https://ericabraley.com/",
-            preview: "/EricaBraleyScreenshot.png"
+            preview: "/EricaBraleyScreenshot.jpg"
         }
     ]
     onMount(() => {
